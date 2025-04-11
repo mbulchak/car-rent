@@ -1,0 +1,132 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.insurances {
+  display: none;
+
+  color: $white;
+  padding-inline: $padding-inline-mb;
+  margin-bottom: 32px;
+
+  justify-content: center;
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+
+    margin-bottom: 24px;
+  }
+
+  &__block {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(1, 361px);
+    grid-template-rows: 280px 271px 267px;
+    gap: 8px;
+
+    @include on-tablet {
+      grid-template-columns: repeat(3, 234px);
+      grid-template-rows: 374px;
+    }
+  }
+}
+
+.insurance {
+  padding: $padding-inline-mb;
+  box-sizing: border-box;
+
+  background-color: $white-05;
+  border-radius: 16px;
+
+  &__active {
+    position: relative;
+    background-color: $primary;
+    overflow: hidden;
+  }
+
+  &__sub__title {
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+
+    margin-bottom: 16px;
+  }
+
+  &__descriptions {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__description__head {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+
+    margin-bottom: 16px;
+  }
+
+  &__description__main {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    margin-bottom: 16px;
+
+    display: flex;
+  }
+
+  &__description__sub {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 140%;
+
+    color: $white-30;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+
+    margin-right: 8px;
+  }
+
+  &__active__effect {
+    position: absolute;
+
+    width: 306px;
+    height: 306px;
+
+    border-radius: 29px;
+    background-color: $primary-card;
+
+    opacity: 0.5;
+    transform: rotate(18deg);
+
+    &--1 {
+      left: 250px;
+      top: 30px;
+    }
+
+    &--2 {
+      left: 135px;
+      top: 115px;
+    }
+
+    &--3 {
+      top: 200px;
+      left: 40px;
+    }
+  }
+}

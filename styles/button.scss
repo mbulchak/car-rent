@@ -1,0 +1,28 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.button {
+  color: $white;
+  background-color: $primary;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+
+  &__main--1 {
+    width: 361px;
+    height: 56px;
+    padding: 18px 24px;
+
+    margin-bottom: 80px;
+
+    @include on-tablet {
+      width: 197px;
+      height: 56px;
+    }
+  }
+}

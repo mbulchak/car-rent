@@ -1,0 +1,139 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.process {
+  &__car {
+    display: none;
+
+    color: $white-50;
+    background-color: $white-05;
+    border-top: 1px solid $white-30;
+    border-bottom: 1px solid $white-30;
+
+    padding-block: 24px 16px;
+    margin-bottom: 32px;
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &__info {
+      padding: 8px 16px;
+
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    &__img {
+      width: 74px;
+      height: 48px;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      color: $white;
+
+      margin-bottom: 8px;
+    }
+
+    &__descr {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+
+      &--2 {
+        color: $white;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 16px;
+  }
+
+  &__progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 98px;
+    height: 46px;
+
+    text-align: center;
+    line-height: 52px;
+    font-weight: 300;
+    font-size: 12px;
+
+    &__general {
+      position: relative;
+    }
+
+    @include on-tablet {
+      width: 192px;
+      height: 51px;
+    }
+  }
+
+  /* 
+  &__progress--1 {
+  }
+  &__progress--2 {
+    position: relative;
+  }
+  &__progress--3 {
+    position: relative;
+  }
+  &__progress--4 {
+    position: relative;
+  } */
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+
+    &--gray {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    width: 50px;
+    background-color: $white-20;
+
+    position: absolute;
+    top: 50%;
+
+    &--1 {
+      background-color: $primary;
+      // top: 35%
+      // transform: translate(-5%, -200%);
+    }
+
+    &--left {
+      left: 50%;
+      // transform: translate(-5%, -200%);
+    }
+
+    &--right {
+      right: 50%;
+      // transform: translate(0%, -200%);
+    }
+
+    @include on-tablet {
+      width: 98px;
+    }
+  }
+}

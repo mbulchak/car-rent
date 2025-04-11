@@ -1,0 +1,124 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.extras {
+  display: none;
+
+  color: $white;
+  padding-inline: $padding-inline-mb;
+  margin-bottom: 32px;
+
+  justify-content: center;
+
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+
+    margin-bottom: 24px;
+  }
+
+  &__blocks {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: repeat(2, 176px);
+    gap: 8px;
+
+    @include on-tablet {
+      grid-template-columns: repeat(2, 356px);
+    }
+  }
+}
+
+.extra {
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 8px;
+  background-color: $white-10;
+
+  width: 176px;
+  height: 108px;
+
+  @include on-tablet {
+    height: 77px;
+    width: 356px;
+  }
+
+  &--active {
+    background-color: $primary;
+  }
+
+  &__main__info {
+    padding: 8px 8px 8px 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include on-tablet {
+      padding-left: 8px;
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    &__first {
+      height: 100%;
+      padding-right: 8px;
+
+      border-right: 1px solid rgba($color: #fff, $alpha: 0.2);
+    }
+
+    &__second {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 64px;
+    }
+  }
+
+  &__img {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    // margin-bottom: 25px;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  &__button {
+    width: 33px;
+    padding: 42px 4.5px;
+
+    color: $white;
+    background-color: $white-20;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+
+    @include on-tablet {
+      padding: 26px 10px;
+    }
+
+    &--active {
+      background-color: $primary-light;
+    }
+
+    &__picture {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

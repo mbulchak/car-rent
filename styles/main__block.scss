@@ -1,0 +1,34 @@
+@use "./mixins" as *;
+
+.main {
+  &__block__first {
+    margin-bottom: 32px;
+  }
+
+  &__block__contacts {
+    height: 466px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 16px;
+
+    background: url(./../images/bg-car.jpg) no-repeat;
+    background-position: 25% 76%;
+    background-size: 268%;
+
+    @include on-tablet {
+      justify-content: flex-start;
+      background-position: 25% 67%;
+      background-size: 205%;
+      padding-inline: 32px;
+    }
+  }
+
+  &__button__block {
+    display: flex;
+    justify-content: center;
+
+    padding-inline: 16px;
+  }
+}

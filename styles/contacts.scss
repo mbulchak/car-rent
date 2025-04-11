@@ -1,0 +1,63 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: $white;
+
+  @include on-tablet {
+    align-items: flex-start;
+  }
+}
+
+.avatars {
+  margin-bottom: 32px;
+}
+.avatar {
+  width: 56px;
+  height: 56px;
+
+  &--1 {
+    z-index: 2;
+  }
+
+  &--2 {
+    z-index: 1;
+  }
+
+  &:not(:first-child) {
+    margin-left: -16px;
+  }
+}
+
+.contact {
+  &__title {
+    align-self: flex-start;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    margin-bottom: 8px;
+  }
+
+  &__decription {
+    align-self: flex-start;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 32px;
+  }
+}
+
+.button__contacts {
+  width: 140px;
+  height: 44px;
+
+  padding: 12px 24px;
+
+  font-weight: 600;
+}

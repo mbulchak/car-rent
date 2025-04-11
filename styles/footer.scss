@@ -1,0 +1,110 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.footer {
+  padding: 40px $padding-inline-mb;
+
+  display: flex;
+  flex-direction: column;
+  color: $white-50;
+
+  @include on-tablet {
+    padding: 64px $padding-tablet 48px;
+  }
+
+  &__first__part {
+    border-bottom: 1px solid $white-50;
+    padding-bottom: 56px;
+    margin-bottom: 32px;
+
+    @include on-tablet {
+      display: flex;
+      justify-content: space-between;
+
+    }
+  }
+
+  &__second__part {
+    @include on-tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    width: 126px;
+    height: 15px;
+
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    margin-bottom: 32px;
+  }
+}
+
+.upToDate {
+  &__title {
+    color: $white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+
+    margin-bottom: 6px;
+  }
+
+  &__input {
+    border: 1px solid $white-50;
+    border-radius: 8px;
+    background-color: transparent;
+
+    padding-inline: 14px;
+    margin-right: 16px;
+    box-sizing: border-box;
+
+    width: 215px;
+    height: 44px;
+
+    @include on-tablet {
+      width: 250px;
+      height: 48px;
+    }
+  }
+
+  &__button {
+    background-color: rgba($color: $primary, $alpha: 0.2);
+    width: 108px;
+    height: 44px;
+
+    @include on-tablet {
+      width: 124px;
+      height: 48px;
+    }
+  }
+}
+
+.company {
+  &__rights {
+    margin-bottom: 24px;
+    line-height: 140%;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include on-tablet {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__policy {
+    display: flex;
+    gap: 16px;
+
+    line-height: 140%;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
