@@ -122,18 +122,14 @@
 
     &--1 {
       background-color: $primary;
-      // top: 35%
-      // transform: translate(-5%, -200%);
     }
 
     &--left {
       left: 50%;
-      // transform: translate(-5%, -200%);
     }
 
     &--right {
       right: 50%;
-      // transform: translate(0%, -200%);
     }
 
     @include on-tablet {
