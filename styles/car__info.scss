@@ -17,6 +17,18 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       padding-inline: $padding-tablet;
+
+      // width: 768px;
+    }
+
+    @include on-desktop-normal {
+      // width: 920px;
+
+      padding: 48px 0px 40px;
+      margin-inline: $margin-desktop;
+
+      border-bottom: 1px solid $white-20;
+      
     }
   }
 
@@ -41,6 +53,10 @@
     @include on-tablet {
       font-size: 24px;
     }
+
+    @include on-desktop-normal {
+      font-size: 32px;
+    }
   }
 
   &__price {
@@ -51,6 +67,10 @@
 
     @include on-tablet {
       margin-bottom: 32px;
+    }
+
+    @include on-desktop-normal {
+      font-size: 24px;
     }
   }
 

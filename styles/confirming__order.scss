@@ -7,17 +7,14 @@
 
   box-sizing: border-box;
 
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   display: none;
 
-  &__content {
-    @include on-tablet {
-      // width: 768px;
-    }
+  @include on-desktop-normal {
+    display: flex;
   }
 
   &__title {
@@ -26,6 +23,10 @@
 
     margin-bottom: 24px;
     align-self: flex-start;
+
+    @include on-desktop-normal {
+      font-size: 24px;
+    }
   }
 
   &__info {
@@ -36,6 +37,10 @@
     @include on-tablet {
       display: flex;
       gap: 32px;
+    }
+
+    @include on-desktop-normal {
+      flex-direction: column;
     }
   }
 
@@ -75,7 +80,8 @@
   &__input {
     height: 48px;
     width: 361px;
-    padding: 12px 14px;
+    // padding: 12px 14px;
+    padding-left: 12px;
 
     border-radius: 8px;
     border: 1px solid $white-20;
@@ -86,6 +92,11 @@
     font-size: 16px;
     line-height: 24px;
     color: $white-50;
+
+    @include on-desktop-normal {
+      width: 448px;
+      box-sizing: content-box;
+    }
   }
 
   &__general {
@@ -102,6 +113,14 @@
 
       @include on-tablet {
         width: 352px;
+      }
+
+      @include on-desktop-normal {
+        width: 448px;
+        box-sizing: content-box;
+        margin-bottom: 32px;
+
+        padding-bottom: 0px;
       }
     }
 
@@ -182,6 +201,8 @@
 
     border-radius: 8px;
     border: none;
+
+    cursor: pointer;
 
     &__later {
       background-color: rgba(182, 136, 103, 0.2);

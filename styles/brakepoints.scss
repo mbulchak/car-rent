@@ -1,0 +1,39 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.brakepoints {
+  display: none;
+
+  @include on-desktop-normal {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  @include on-desktop-big {
+    padding-left: 228px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 24px;
+    padding-inline: 32px;
+  }
+
+  &__title {
+    color: $white-50;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    &__goal {
+      color: $white-90;
+    }
+  }
+
+  &__img {
+    width: 16px;
+    height: 16px;
+  }
+}

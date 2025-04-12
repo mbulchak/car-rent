@@ -2,10 +2,8 @@
 @use "./mixins" as *;
 
 .header {
-  // width: 100%;
   height: 52px;
   padding-inline: $padding-inline-mb;
-  // margin-bottom: 40px;
 
   display: flex;
   justify-content: space-between;
@@ -13,12 +11,47 @@
 
   background-color: $black-70;
 
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
   @include on-tablet {
     &__block__second {
       display: flex;
       align-items: center;
       gap: 16px;
     }
+  }
+
+  @include on-desktop-normal {
+    padding-inline: 40px;
+    margin-bottom: 64px;
+
+    &__block__first {
+      display: flex;
+      gap: 84px;
+    }
+  }
+}
+
+.nav {
+  display: none;
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  @include on-desktop-normal {
+    display: block;
   }
 }
 
@@ -28,27 +61,26 @@
 }
 
 .burger__menu {
-  width: 24px;
-  height: 24px;
   padding: 10px;
   cursor: pointer;
+
+  @include on-desktop-normal {
+    display: none;
+  }
 }
 
 .phone {
   &__block {
     display: none;
   }
-  
+
   @include on-tablet {
     &__block {
       display: flex;
       align-items: center;
       gap: 4px;
-    }
 
-    &__img {
-      width: 24px;
-      height: 24px;
+      padding-inline: 16px;
     }
 
     &__number {
@@ -56,7 +88,21 @@
       font-size: 16px;
       line-height: 100%;
 
-      color: $white-50;
+      color: $white-70;
     }
+  }
+}
+
+.lang,
+.sign__in {
+  display: none;
+
+  @include on-desktop-normal {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding-inline: 16px;
+    color: $white-70;
   }
 }

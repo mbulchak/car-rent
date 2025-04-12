@@ -15,6 +15,10 @@
     font-size: 20px;
 
     margin-bottom: 24px;
+
+    @include on-desktop-normal {
+      font-size: 24px;
+    }
   }
 
   &__block {
@@ -28,6 +32,15 @@
       grid-template-columns: repeat(3, 234px);
       grid-template-rows: 374px;
     }
+
+    @include on-desktop-big {
+      grid-template-columns: repeat(3, 294px);
+      grid-template-rows: 327px;
+    }
+  }
+
+  @include on-desktop-normal {
+    display: flex;
   }
 }
 
@@ -35,7 +48,7 @@
   padding: $padding-inline-mb;
   box-sizing: border-box;
 
-  background-color: $white-05;
+  background-color: rgba($color: #fff, $alpha: 0.05);
   border-radius: 16px;
 
   &__active {
@@ -62,6 +75,10 @@
     line-height: 100%;
 
     margin-bottom: 16px;
+
+    @include on-desktop-big {
+      font-size: 32px;
+    }
   }
 
   &__descriptions {
@@ -75,6 +92,10 @@
     line-height: 100%;
 
     margin-bottom: 16px;
+
+    @include on-desktop-big {
+      font-size: 14px;
+    }
   }
 
   &__description__main {

@@ -3,3 +3,15 @@
     @content;
   }
 }
+
+@mixin on-desktop-normal {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin on-desktop-big {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}

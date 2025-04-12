@@ -47,6 +47,10 @@
         color: $white;
       }
     }
+
+    @include on-desktop-normal {
+      display: none;
+    }
   }
 
   &__info {

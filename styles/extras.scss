@@ -10,11 +10,23 @@
 
   justify-content: center;
 
+  @include on-desktop-normal {
+    display: flex;
+
+    border-bottom: 1px solid $white-20;
+    margin-inline: $margin-desktop;
+    padding: 0px 0px 40px;
+  }
+
   &__title {
     font-weight: 400;
     font-size: 20px;
 
     margin-bottom: 24px;
+
+    @include on-desktop-normal {
+      font-size: 24px;
+    }
   }
 
   &__blocks {
@@ -25,6 +37,11 @@
 
     @include on-tablet {
       grid-template-columns: repeat(2, 356px);
+    }
+
+    @include on-desktop-big {
+      grid-template-columns: repeat(3, 294px);
+      gap: 24px 16px;
     }
   }
 }
@@ -44,6 +61,10 @@
     width: 356px;
   }
 
+  @include on-desktop-big {
+    width: 294px;
+  }
+
   &--active {
     background-color: $primary;
   }
@@ -55,24 +76,24 @@
     flex-direction: column;
     gap: 8px;
 
-    @include on-tablet {
-      padding-left: 8px;
-      flex-direction: row;
-      gap: 16px;
-    }
-
-    &__first {
-      height: 100%;
-      padding-right: 8px;
-
-      border-right: 1px solid rgba($color: #fff, $alpha: 0.2);
-    }
-
     &__second {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 64px;
+    }
+
+    @include on-tablet {
+      padding-left: 8px;
+      flex-direction: row;
+      gap: 16px;
+
+      &__first {
+        height: 100%;
+        padding-right: 8px;
+
+        border-right: 1px solid rgba($color: #fff, $alpha: 0.2);
+      }
     }
   }
 
@@ -86,13 +107,19 @@
     font-size: 14px;
     line-height: 140%;
 
-    // margin-bottom: 25px;
+    @include on-tablet {
+      font-size: 16px;
+    }
   }
 
   &__price {
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
+
+    @include on-tablet {
+      font-size: 20px;
+    }
   }
 
   &__button {
