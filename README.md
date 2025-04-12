@@ -7,4 +7,5 @@ This car rent application gives you an information about car renting, and differ
 
 ## Setup
 - Clone the repo
+
 - Open with Live Server on index.html
